@@ -7,13 +7,24 @@
 			name="description"
 			content="Puchicavos Restaurant - Authentic flavors and unforgettable dining experience in the heart of the city"
 		/>
+		<meta name="theme-color" content="#2c3e50" />
+
+		<!-- Performance Optimization -->
+		<link rel="dns-prefetch" href="//images.unsplash.com" />
+		<link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+
 		<title>Puchicavos - Restaurant</title>
-		<link rel="stylesheet" href="styles.css" />
+
+		<!-- Preload Critical Resources -->
+		<link rel="preload" href="styles.css" as="style" />
 		<link
 			rel="preload"
 			href="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200"
 			as="image"
 		/>
+
+		<link rel="stylesheet" href="styles.css" />
+		<script src="js/image-config.js"></script>
 	</head>
 	<body>
 		<!-- ========================================
@@ -114,6 +125,8 @@
 									src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=150"
 									alt="Sample Appetizer 1"
 									class="item-image"
+									loading="lazy"
+									decoding="async"
 								/>
 								<div class="item-info">
 									<div class="item-name">Sample Appetizer 1</div>
@@ -128,6 +141,8 @@
 									src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=150"
 									alt="Sample Appetizer 2"
 									class="item-image"
+									loading="lazy"
+									decoding="async"
 								/>
 								<div class="item-info">
 									<div class="item-name">Sample Appetizer 2</div>
@@ -142,6 +157,8 @@
 									src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=150"
 									alt="Sample Appetizer 3"
 									class="item-image"
+									loading="lazy"
+									decoding="async"
 								/>
 								<div class="item-info">
 									<div class="item-name">Sample Appetizer 3</div>
@@ -262,29 +279,31 @@
 				</p>
 
 				<div class="location-content">
-					<div class="location-info">
-						<h3>Address</h3>
-						<p><strong>Puchicavos Restaurant</strong></p>
-						<p>123 Main Street</p>
-						<p>City, State 12345</p>
-						<p class="call-button">
-							<a href="tel:+1234567890" class="btn">Call Us</a>
-						</p>
-					</div>
+					<div class="location-info-grid">
+						<div class="location-info">
+							<h3>Address</h3>
+							<p><strong>Puchicavos Restaurant</strong></p>
+							<p>123 Main Street</p>
+							<p>City, State 12345</p>
+							<p class="call-button">
+								<a href="tel:+1234567890" class="btn">Call Us</a>
+							</p>
+						</div>
 
-					<div class="hours-info">
-						<h3>Hours</h3>
-						<div class="day">
-							<span>Monday - Thursday</span>
-							<span>11:00 AM - 9:00 PM</span>
-						</div>
-						<div class="day">
-							<span>Friday - Saturday</span>
-							<span>11:00 AM - 10:00 PM</span>
-						</div>
-						<div class="day">
-							<span>Sunday</span>
-							<span>12:00 PM - 8:00 PM</span>
+						<div class="hours-info">
+							<h3>Hours</h3>
+							<div class="day">
+								<span>Monday - Thursday</span>
+								<span>11:00 AM - 9:00 PM</span>
+							</div>
+							<div class="day">
+								<span>Friday - Saturday</span>
+								<span>11:00 AM - 10:00 PM</span>
+							</div>
+							<div class="day">
+								<span>Sunday</span>
+								<span>12:00 PM - 8:00 PM</span>
+							</div>
 						</div>
 					</div>
 
@@ -357,10 +376,6 @@
 								/>
 							</svg>
 						</a>
-					</div>
-
-					<div class="reservation-button">
-						<a href="#" class="btn">Make a Reservation</a>
 					</div>
 				</div>
 			</div>
@@ -452,5 +467,8 @@
 				});
 			});
 		</script>
+		<script src="js/image-manager.js" defer></script>
+		<!-- Performance Monitoring (remove in production) -->
+		<script src="js/performance-monitor.js" defer></script>
 	</body>
 </html>
