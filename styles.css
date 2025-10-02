@@ -400,12 +400,6 @@ nav ul li a:hover {
 	padding: var(--space-2xl);
 	border-radius: var(--radius-md);
 	box-shadow: var(--shadow-md);
-	transition: transform var(--transition-normal);
-}
-
-.menu-category:hover {
-	transform: translateY(-2px);
-	box-shadow: var(--shadow-lg);
 }
 
 .menu-category h3 {
@@ -424,20 +418,12 @@ nav ul li a:hover {
 	margin-bottom: var(--space-xl);
 	padding-bottom: var(--space-xl);
 	border-bottom: 1px solid var(--border-light);
-	transition: background var(--transition-normal);
 }
 
 .menu-item:last-child {
 	border-bottom: none;
 	margin-bottom: 0;
 	padding-bottom: 0;
-}
-
-.menu-item:hover {
-	background: var(--bg-secondary);
-	margin: 0 calc(var(--space-md) * -1);
-	padding: var(--space-md);
-	border-radius: var(--radius-sm);
 }
 
 .item-image {
@@ -702,11 +688,6 @@ nav ul li a:hover {
    ======================================== */
 .call-button {
 	margin-top: var(--space-xl);
-}
-
-.instagram-link {
-	text-align: center;
-	margin-top: var(--space-2xl);
 }
 
 /* ========================================
